@@ -400,7 +400,7 @@
         if(this.heartCount % 5 === 0 && this.gameSpeed < SPEED_CAP)
           this.gameSpeed += SPEED_STEP
 
-        if(this.heartCount === 1 && !this.questionAsked){
+        if(this.heartCount === 10 && !this.questionAsked){
           this.questionAsked = true
           this.askLoveQuestion()
         }
@@ -668,7 +668,6 @@ makeButtonRunAway();
     document.getElementById('restart-button').onclick = startGame
 
     /* відповідь на запитання */
-    document.getElementById('desire-btn').onclick =
     document.getElementById('love-btn').onclick = e=>{
       const love = e.currentTarget.id === 'love-btn'
       domLove.classList.add('hidden')
